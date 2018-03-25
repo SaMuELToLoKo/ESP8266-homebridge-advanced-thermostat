@@ -228,6 +228,8 @@ void loop() {
       client.println("HTTP/1.1 200 OK");
       client.println("Content-Type: text/html");
       client.println();
+      byte water = getWaterState(state);
+      client.println(water);
       delay(10);
       return;
     }
