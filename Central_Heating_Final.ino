@@ -243,7 +243,6 @@ void loop() {
   }
 
   //Web Platform**** I'm Still working in it.
-  // Prepare the response
 
   String s = "HTTP/1.1 200 OK\r\n";
   s += "Content-Type: text/html\r\n\r\n";
