@@ -37,6 +37,9 @@ void getTemperatureSet() {
   String humS = line.substring(humStart, humEnd);
   currTemp = tempS.toFloat();
   currHum = humS.toFloat();
+  if (unit == 1) {
+      currTemp = (((9 * currTemp) / 5) + 32);
+  }
   tempTimer = millis();
   delay(10);
 }
