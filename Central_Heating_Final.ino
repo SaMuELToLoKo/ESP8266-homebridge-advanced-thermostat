@@ -112,6 +112,7 @@ void loop() {
       float set = req.substring(24, req.indexOf("HTTP")).toFloat();
       Serial.println(set);
       tarTemp = set;
+      flag = false;
       client.println(String(tarTemp));
       delay(10);
       return;
@@ -151,6 +152,15 @@ void loop() {
       byte set = req.substring(12, req.indexOf("HTTP")).toInt();
       Serial.println(set);
       unit = set;
+      if (unit == 0) {
+        float thrTemp = 20.0;
+        float thrCool = 25.0;
+      }
+      else if (unit == 1) {
+        float thrTemp = 68.0;
+        float thrCool = 77.0;
+      }
+      flag = false;
       client.println(String(unit));
       delay(10);
       return;
