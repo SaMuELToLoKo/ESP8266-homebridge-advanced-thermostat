@@ -161,6 +161,7 @@ void loop() {
         float thrCool = 77.0;
       }
       flag = false;
+      getTemperatureSet();
       client.println(String(unit));
       delay(10);
       return;
